@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="池袋の大学に入学し、124単位を集めて卒業を目指すドット絵ローグライク">
+  <title>池袋ローグ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <div id="hud-floor"></div>
+      <div id="hud-stats"></div>
+    </header>
+
+    <div id="screen-wrap">
+      <canvas id="screen" width="320" height="208"></canvas>
+      <div id="banner" class="hidden"></div>
+      <div id="title" class="hidden">
+        <h1><span class="t-sub">～単位を集めて卒業せよ～</span>池袋ローグ</h1>
+        <div class="title-buttons">
+          <button id="btn-continue">つづきから</button>
+          <button id="btn-new">はじめから入学</button>
+          <button id="btn-help">遊び方</button>
+        </div>
+        <div id="best"></div>
+      </div>
+    </div>
+
+    <div id="log"></div>
+
+    <div id="controls">
+      <div id="dpad">
+        <button data-dx="-1" data-dy="-1">↖</button>
+        <button data-dx="0" data-dy="-1">↑</button>
+        <button data-dx="1" data-dy="-1">↗</button>
+        <button data-dx="-1" data-dy="0">←</button>
+        <button data-dx="0" data-dy="0" class="wait">足踏</button>
+        <button data-dx="1" data-dy="0">→</button>
+        <button data-dx="-1" data-dy="1">↙</button>
+        <button data-dx="0" data-dy="1">↓</button>
+        <button data-dx="1" data-dy="1">↘</button>
+      </div>
+      <div id="actions">
+        <button id="btn-act" class="primary">決定</button>
+        <button id="btn-inv">持ち物</button>
+        <button id="btn-menu">メニュー</button>
+      </div>
+    </div>
+
+    <div id="modal" class="hidden">
+      <div class="panel">
+        <h2></h2>
+        <div class="body"></div>
+        <div class="options"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/sprites.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
